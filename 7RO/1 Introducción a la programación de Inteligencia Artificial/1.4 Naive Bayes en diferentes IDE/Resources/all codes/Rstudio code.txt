@@ -1,0 +1,76 @@
+####################################
+# Ejemplo Clasificador Naive Bayes #
+####################################
+# Instala los paquetes solo si no están ya instalados
+if(!require("e1071")) install.packages("e1071", dependencies=TRUE)
+if(!require("tm")) install.packages("tm", dependencies=TRUE)
+if(!require("ROCR")) install.packages("ROCR", dependencies=TRUE)
+
+# Cargar las bibliotecas necesarias
+library(e1071)
+library(tm)
+library(ROCR)
+
+# Cargar el dataset
+# Asegúrate de cambiar la ruta del archivo según tu sistema
+vote_data <- read.csv("house-votes-84.data", header=FALSE, stringsAsFactors=FALSE)
+
+# Renombrar las columnas
+header <- c("NAME", "V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "V10", "V11", "V12", "V13", "V14", "V15", "V16")
+names(vote_data) <- header
+
+# Reemplazar los "?" con valores vacíos
+vote_data[vote_data == "?"] <- NA 
+
+# Convertir la columna NAME en un factor (variable categórica)
+vote_data$NAME <- as.factor(vote_data$NAME)
+
+# Visualizar la proporción de cada clase en la columna NAME
+print(prop.table(table(vote_data$NAME)))
+
+##############################################
+# 2. Creación de datos de entrenamiento/test #
+##############################################
+# Dividir el dataset en conjuntos de entrenamiento y prueba
+vote_raw_train <- vote_data[1:370, ]
+vote_raw_test <- vote_data[371:435, ]
+
+# Revisar las proporciones en cada conjunto
+print(prop.table(table(vote_raw_train$NAME)))
+print(prop.table(table(vote_raw_test$NAME)))
+
+##########################################
+# 3. Creación de características para el modelo #
+##########################################
+# Entrenar el clasificador Naive Bayes
+vote_classifier <- naiveBayes(vote_raw_train[, -1], vote_raw_train$NAME, laplace=1)
+
+# Realizar predicciones en el conjunto de prueba
+vote_test_pred <- predict(vote_classifier, vote_raw_test[, -1], type="class")
+
+# Crear y visualizar la matriz de confusión
+conf_matrix <- table(Predicción=vote_test_pred, Real=vote_raw_test$NAME)
+print(conf_matrix)
+print(prop.table(conf_matrix, margin=2))
+
+# Revisar las predicciones incorrectas
+errores <- vote_raw_test[vote_raw_test$NAME != vote_test_pred,]
+print(errores)
+
+# Predicción con probabilidades
+vote_test_pred_probs <- predict(vote_classifier, vote_raw_test[, -1], type="raw")
+pred <- as.data.frame(vote_test_pred_probs)
+
+# Calcular la curva ROC
+pred_roc <- prediction(predictions=pred$democrat, labels=vote_raw_test$NAME)
+perf_roc <- performance(pred_roc, "tpr", "fpr")
+plot(perf_roc, main="Curva ROC")
+
+# Calcular y graficar la curva Precision-Recall
+perf_pr <- performance(pred_roc, "prec", "rec")
+plot(perf_pr, main="Curva Precision-Recall")
+
+# Calcular y graficar la curva Sensitivity-Specificity
+perf_ss <- performance(pred_roc, "sens", "spec")
+plot(perf_ss, main="Curva Sensitivity-Specificity")
+
