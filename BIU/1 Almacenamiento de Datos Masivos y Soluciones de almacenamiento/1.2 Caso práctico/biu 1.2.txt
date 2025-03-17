@@ -1,8 +1,0 @@
-Datos del caso práctico:
-
-*datos externos e internos
-*datos generados de forma continua
-*cantidad de datos 500TB actuales + 100TB c/año
-*tienen que ser accesibles en todo momento
-analíticas interactivas, filtrables y que actualice los gráficos, con *información seleccionada de una semana atrás
-*Ofertas en función a un histórico del cliente
