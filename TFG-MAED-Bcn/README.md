@@ -6,7 +6,7 @@ Este proyecto realiza la predicción de datos energéticos de la ciudad de Barce
 Contenido
 ---------
 
-- app.py: Aplicación principal con interfaz Streamlit.
+- app.py: Aplicación principal con interfaz [Streamlit](https://streamlit.io/).
 - app/api.py: API REST para consultas.
 - requirements.txt: Dependencias del proyecto.
 - installer.bat: Script para instalación automática de Python, entorno virtual y dependencias.
@@ -16,10 +16,11 @@ Contenido
 Tabla de Contenidos
 -------------------
 
-1. Instalación Manual  
-2. Instalación Automática con installer.bat  
-3. Ejecución de la Aplicación con ejecutable.bat  
-4. Notas  
+1. [Instalación Manual](#instalación-manual)
+2. [Instalación Automática con installer.bat](#instalación-automática-con-installerbat)
+3. [Ejecución de la Aplicación con ejecutable.bat](#ejecución-de-la-aplicación-con-ejecutablebat)
+4. [Notas](#notas)
+
 
 Instalación Manual
 ------------------
@@ -69,9 +70,9 @@ installer.bat
 Sigue las instrucciones en pantalla. Al finalizar, tendrás el entorno listo para ejecutar la aplicación.
 
 Ejecución de la Aplicación con ejecutable.bat
-Para iniciar la aplicación Streamlit y la API Flask simultáneamente, puedes usar el script ejecutable.bat. Este script:
+Para iniciar la aplicación Streamlit y la API Flask simultáneamente, puedes usar el script ejecutable.bat. 
 
-Activa el entorno virtual si existe.
+Este script activa el entorno virtual si existe.
 
 Ejecuta app/api.py en segundo plano (API Flask).
 
@@ -88,9 +89,9 @@ ejecutable.bat
 
 Luego abre en tu navegador:
 
-Interfaz Streamlit: http://localhost:8501
+Interfaz Streamlit: [http://localhost:8501](http://localhost:8501)
 
-API Flask: http://127.0.0.1:5000
+API Flask: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 Para detener la aplicación, simplemente cierra la ventana de consola que se abrió.
 
