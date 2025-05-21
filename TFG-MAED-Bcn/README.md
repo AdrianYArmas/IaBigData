@@ -1,5 +1,9 @@
-Predicción de Datos Energéticos de Barcelona
-=============================================
+## 🌐 [Español](#español) | [English](#english)
+
+---
+
+# 📊 Predicción de Datos Energéticos de Barcelona (Español)
+<a name="español"></a>
 
 Este proyecto realiza la predicción de datos energéticos de la ciudad de Barcelona utilizando modelos de machine learning y ofrece una interfaz visual mediante Streamlit, además de una API REST construida con Flask para consultas programáticas.
 
