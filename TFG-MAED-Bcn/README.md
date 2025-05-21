@@ -114,3 +114,76 @@ Asegúrate de ejecutar los scripts .bat con permisos adecuados, especialmente pa
 En caso de problemas con el PATH, reinicia la consola o añade Python manualmente al PATH.
 
 El proyecto está optimizado para Windows debido al uso de scripts .bat.
+
+
+# 📊 Barcelona Energy Data Prediction (English)
+<a name="english"></a>
+
+This project predicts energy data for the city of Barcelona using **machine learning models**, offering a **visual interface via Streamlit** and a **REST API** built with **Flask** for programmatic queries.
+
+### Contents
+
+- `app.py`: Main app with [Streamlit](https://streamlit.io/) interface.
+- `app/api.py`: REST API for programmatic queries.
+- `requirements.txt`: Project dependencies.
+- `installer.bat`: Script for automatic setup (Python, virtual env, dependencies).
+- `ejecutable.bat`: Script to launch both the app and the API in background.
+- `venv/`: Virtual environment (excluded from the repo).
+
+### Table of Contents
+
+1. [Manual Installation](#manual-installation)
+2. [Automatic Installation with installer.bat](#automatic-installation-with-installerbat)
+3. [Running the App with ejecutable.bat](#running-the-app-with-ejecutablebat)
+4. [Notes](#notes-en)
+
+### Manual Installation
+
+1. **Install Python 3.11+**  
+   Download from: https://www.python.org/downloads/release/python-3114/  
+   Be sure to check "Add Python to PATH".
+
+2. **Create virtual environment**
+```bash
+python -m venv venv
+```
+
+3. **Activate virtual environment**
+```bash
+venv\Scripts\activate
+```
+4. **Install dependencies**
+```bash
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+Automatic Installation with installer.bat
+Run installer.bat to:
+* Check or install Python 3.11
+* Create and activate the virtual environment
+* Install dependencies
+
+```bash
+installer.bat
+```
+
+Running the App with ejecutable.bat
+
+This script:
+Activates the virtual environment
+Starts app/api.py (Flask API)
+Launches app.py via Streamlit
+```bash
+ejecutable.bat
+```
+
+hen open in your browser:
+
+[http://localhost:8501](http://localhost:8501) – Streamlit Interface
+
+[http://127.0.0.1:5000](http://127.0.0.1:5000) – Flask API
+
+Notes <a name="notes-en"></a>
+Run .bat scripts with admin privileges.
+
+If Python isn't on PATH, add it manually or restart the terminal.
