@@ -157,7 +157,7 @@ venv\Scripts\activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
-Automatic Installation with installer.bat
+### Automatic Installation with installer.bat
 Run installer.bat to:
 * Check or install Python 3.11
 * Create and activate the virtual environment
@@ -167,7 +167,7 @@ Run installer.bat to:
 installer.bat
 ```
 
-Running the App with ejecutable.bat
+### Running the App with ejecutable.bat]
 
 This script:
 Activates the virtual environment
