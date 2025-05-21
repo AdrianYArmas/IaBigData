@@ -48,6 +48,10 @@ venv\Scripts\activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
+
+Instalación Automática con installer.bat
+------------------
+
 Instalación Automática con installer.bat
 El proyecto incluye un script installer.bat para facilitar la instalación automática en Windows. Este script:
 
@@ -68,6 +72,9 @@ installer.bat
 ```
 
 Sigue las instrucciones en pantalla. Al finalizar, tendrás el entorno listo para ejecutar la aplicación.
+
+Ejecución de la Aplicación con ejecutable.bat
+------------------
 
 Ejecución de la Aplicación con ejecutable.bat
 Para iniciar la aplicación Streamlit y la API Flask simultáneamente, puedes usar el script ejecutable.bat. 
@@ -96,6 +103,8 @@ API Flask: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 Para detener la aplicación, simplemente cierra la ventana de consola que se abrió.
 
 Notas
+------------------
+
 Asegúrate de ejecutar los scripts .bat con permisos adecuados, especialmente para la instalación de Python.
 
 En caso de problemas con el PATH, reinicia la consola o añade Python manualmente al PATH.
