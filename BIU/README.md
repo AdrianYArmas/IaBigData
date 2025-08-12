@@ -138,11 +138,9 @@ Este paso construye el índice FAISS a partir de la documentación interna.
 
 ---
 
-## 🔄 flowchart TD
-
-```markdown
 ## 🔄 Diagrama de flujo
 ```mermaid
+flowchart TD
     A[📂 PDFs en static_sources/data/Documents] --> B[🛠 preprocesar_pdfs.py]
     B --> C[✂️ Extracción de texto]
     C --> D[🧠 Generación de embeddings]
@@ -150,7 +148,7 @@ Este paso construye el índice FAISS a partir de la documentación interna.
     E --> F[🤖 Backend recibe pregunta]
     F --> G[🔍 Recuperación de documentos relevantes]
     G --> H[📝 Respuesta generada por el modelo LLM]
-```
+
 
 ![Flujo de SmartRAGent](static_sources/img/flow_smartRAGent.png)
 
