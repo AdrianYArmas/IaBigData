@@ -148,9 +148,8 @@ flowchart TD
     E --> F[🤖 Backend recibe pregunta]
     F --> G[🔍 Recuperación de documentos relevantes]
     G --> H[📝 Respuesta generada por el modelo LLM]
+    H --> I[👁️ Visualización en el frontend]
 ```
-
-![Flujo de SmartRAGent](static_sources/img/flow_smartRAGent.png)
 
 ---
 
