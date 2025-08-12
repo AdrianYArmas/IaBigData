@@ -5,7 +5,7 @@ Utiliza un motor de búsqueda semántica y un modelo de lenguaje para responder 
 
 ---
 
-## 📑 Tabla de Contenido
+## 📝 Tabla de Contenido
 
 - [📂 Estructura del proyecto](#-estructura-del-proyecto)
 - [📋 Prerrequisitos](#-prerrequisitos)
