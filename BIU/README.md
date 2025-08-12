@@ -1,6 +1,6 @@
 # smartRAGent
 
-**smartRAGent** es un sistema RAG (Retrieval-Augmented Generation) diseñado para ayudar con la documentación interna de **Desic**.  
+**smartRAGent** es un sistema RAG (Retrieval-Augmented Generation) diseñado para ayudar con la documentación interna de **DESIC**.  
 Utiliza un motor de búsqueda semántica y un modelo de lenguaje para responder preguntas basadas en la documentación interna.
 
 ---
@@ -157,10 +157,11 @@ flowchart TD
 
 - **smartRAGent** utiliza FAISS para búsquedas semánticas y un modelo de embeddings (`embedding_model.pkl`).
 - Los PDFs a indexar deben colocarse en static_sources/data/Documents antes de ejecutar preprocesar_pdfs.py.
-- El sistema está optimizado para entornos internos de Desic.
+- El sistema está optimizado para entornos internos de DESIC.
 
 ---
 
 ## 📜 Licencia
 
-Este proyecto es de uso interno de **Desic** y no debe compartirse fuera de la organización.
+Este proyecto es de uso interno de **DESIC** y no debe compartirse fuera de la organización.
+Todos los derechos pertenecel a DESIC.S.L
