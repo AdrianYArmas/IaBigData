@@ -139,6 +139,9 @@ Este paso construye el índice FAISS a partir de la documentación interna.
 ---
 
 ## 🔄 flowchart TD
+
+```markdown
+## 🔄 Diagrama de flujo
 ```mermaid
     A[📂 PDFs en static_sources/data/Documents] --> B[🛠 preprocesar_pdfs.py]
     B --> C[✂️ Extracción de texto]
