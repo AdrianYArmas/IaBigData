@@ -24,35 +24,34 @@ Utiliza un motor de búsqueda semántica y un modelo de lenguaje para responder 
 ```
 SMARTRAGENT_LOCAL/
 │
-├── logs/                       # Archivos de logs de la aplicación
-├── sql/                        # Scripts SQL o base de datos
+├── logs/                                # Archivos de logs generados por la aplicación
+├── sql/                                 # Scripts y base de datos SQLite
 ├── src/
-│   ├── backend/                # Lógica de negocio y procesamiento de datos
-│   │   ├── faiss_index_global/
-│   │   ├── faiss_index_normativas/
-│   │   ├── chat_db.py
-│   │   ├── embedding_model.pkl
-│   │   ├── main.py
-│   │   ├── model_handler.py
-│   │   ├── preprocesar_pdfs.py
-│   │   └── __init__.py
-│   │
-│   ├── frontend/               # Interfaz de usuario
-│   │   ├── .streamlit/
-│   │   ├── components/
-│   │   ├── img/
-│   │   ├── app.py
-│   │   └── __init__.py
+│ ├── backend/                           # Lógica de negocio y procesamiento
+│ │ ├── faiss_index_global/              # Índice FAISS general
+│ │ ├── faiss_index_normativas/          # Índice FAISS específico para normativas
+│ │ ├── chat_db.py                       # Gestión del historial de chats
+│ │ ├── embedding_model.pkl              # Modelo de embeddings serializado
+│ │ ├── main.py                          # API/servidor backend principal
+│ │ ├── model_handler.py                 # Funciones para manejar el modelo LLM
+│ │ ├── preprocesar_pdfs.py              # Script para procesar e indexar PDFs
+│ │ └── init.py
+│ │
+│ ├── frontend/                          # Interfaz de usuario con Streamlit
+│ │ ├── .streamlit/                      # Configuración de Streamlit
+│ │ ├── components/                      # Componentes UI personalizados
+│ │ ├── img/                             # Recursos gráficos
+│ │ ├── app.py                           # Aplicación principal Streamlit
+│ │ └── init.py
 │
-├── static_sources/             # Recursos estáticos
-│   └── data/
-│   └── Documents/              # Carpeta con PDFs que serán procesados
-├── config.py                   # Configuración del proyecto
-├── config.yaml                 # Configuración YAML
-├── launcher.py                 # Script de inicio
-├── run_app.py                  # Script principal de ejecución
-├── setup.py                    # Instalación del proyecto
-├── requirements.txt            # Dependencias de Python
+├── static_sources/                      # Archivos estáticos
+│ └── data/
+│ └── Documents/                         # PDFs a indexar
+├── config.py                            # Configuración en Python
+├── config.yaml                          # Configuración en YAML
+├── launcher.py                          # Script para lanzar backend y frontend
+├── run_app.py                           # Ejecución principal de la app
+├── requirements.txt                     # Dependencias del proyecto
 └── README.md
 ```
 
