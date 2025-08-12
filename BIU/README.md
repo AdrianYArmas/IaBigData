@@ -62,9 +62,9 @@ SMARTRAGENT_LOCAL/
 
 Antes de instalar y ejecutar **smartRAGent**, asegúrate de contar con:
 
-- **Python** 3.9 o superior  
+- [**Python** 3.9 o superior](https://www.python.org/downloads/)
 - **pip** actualizado (`pip install --upgrade pip`)  
-- **Git** para clonar el repositorio  
+- [**Git**](https://git-scm.com/downloads) para clonar el repositorio
 - Sistema operativo compatible: **Windows**, **Linux** o **macOS**  
 - Acceso a internet para instalar dependencias  
 
